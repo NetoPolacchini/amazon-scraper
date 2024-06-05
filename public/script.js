@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const productDiv = document.createElement('div');
       productDiv.innerHTML = `
         <h2>${product.title}</h2>
+        <img src="${product.imageUrl}" alt="${product.title}">
         <p>Rating: ${product.rating}</p>
         <p>Reviews: ${product.reviews}</p>
-        <img src="${product.imageUrl}" alt="${product.title}">
       `;
       resultsDiv.appendChild(productDiv);
     });

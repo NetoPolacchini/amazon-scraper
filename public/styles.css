@@ -1,11 +1,10 @@
 .container {
-  max-width: 600px;
   margin: 50px auto;
   text-align: center;
 }
 
 input[type="text"] {
-  width: 70%;
+  width: 30%;
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -23,6 +22,34 @@ button:hover {
 }
 
 #results {
-  margin-top: 20px;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#results div{
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+
+#results h2{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#results img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#results p {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 0;
 }

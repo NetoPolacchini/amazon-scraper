@@ -25,11 +25,10 @@ app.get('/api/scrape', async (req, res) => {
 
     const scrapedData = products.map(product => ({
       title: product.querySelector('h2 a') ? product.querySelector('h2 a').textContent.trim() : 'N/A',
+      imageUrl: product.querySelector('img') ? product.querySelector('img').src : 'N/A',
       rating: product.querySelector('span[aria-label*="out of 5 stars"]') ? product.querySelector('span[aria-label*="out of 5 stars"]').getAttribute('aria-label') : 'N/A',
-      reviews: product.querySelector('span[aria-label*="ratings"]') ? product.querySelector('span[aria-label*="ratings"]').getAttribute('aria-label') : 'N/A',
-      imageUrl: product.querySelector('img') ? product.querySelector('img').src : 'N/A'
+      reviews: product.querySelector('span[aria-label*="ratings"]') ? product.querySelector('span[aria-label*="ratings"]').getAttribute('aria-label') : 'N/A'
     }));
-
 
     res.json(scrapedData);
   } catch (error) {
